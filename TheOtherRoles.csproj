@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>TheOtherRolesRemastered</AssemblyName>
+    <Description>Port of The Other Roles to MiraAPI architecture</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>TheOtherRolesRemastered</RootNamespace>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="libs/*.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="_external_reference\**" />
+    <None Include="_external_reference\**" />
+
+    <Compile Remove="LegacySource\**" />
+    <None Include="LegacySource\**" />
+    
+    <Compile Remove="libs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\**" />
+    <EmbeddedResource Include="Resources\**" />
+  </ItemGroup>
+
+</Project>

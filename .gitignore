@@ -545,6 +545,7 @@ Assets/AssetStoreTools*
 # Custom
 *.suo
 *.cache
+*.csproj.
 *.csproj.user
 
 .fake
@@ -555,6 +556,7 @@ Assets/AssetStoreTools*
 
 # Ignoruj cały folder z kodem referencyjnym (TOU/MiraAPI)
 _external_reference/
+LegacySource/
 
 # Ignoruj pliki tymczasowe Cursora, ale zachowaj reguły
 .cursor/
